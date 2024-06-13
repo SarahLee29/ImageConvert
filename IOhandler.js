@@ -176,7 +176,7 @@ const zip = (pathIn) => {
       rej(err);
     });
     archive.pipe(output);
-    archive.directory(pathIn);
+    archive.directory(pathIn,false);
     archive.finalize();
     // To ensure that all but not part of files are zipped, put a delay before adding files to be zipped
     // setTimeout(() => {
